@@ -64,7 +64,7 @@
 1. 通过 USB 数据线将平板连接至电脑，在电脑端打开 CMD 或终端，定位到 ADB 目录。
 
    - 这里如果发现在 USB 连接后，电脑中未显示手机或平板设备（没连上），很有可能是因为数据线的问题（建议尽量使用原装数据线）或电脑 USB 驱动的问题。
-   - 如果是电脑 USB 驱动的问题，对于华为设备，可以在电脑上安装 [华为手机助手](https://consumer.huawei.com/cn/support/hisuite/) ，打开后点击右上角三条横线那个图标 "$\equiv$"，进入设置，点击“尝试其他方式”，然后再点击“重新安装USB驱动”即可。
+   - 如果是电脑 USB 驱动的问题，对于华为设备，可以在电脑上安装 [华为手机助手](https://consumer.huawei.com/cn/support/hisuite/) ，打开后点击右上角三条横线那个图标，进入设置，点击“尝试其他方式”，然后再点击“重新安装USB驱动”即可。
      [![pZuYtpQ.png](https://s41.ax1x.com/2025/12/09/pZuYtpQ.png)](https://imgchr.com/i/pZuYtpQ)
 
      [![pZuYGtS.png](https://s41.ax1x.com/2025/12/09/pZuYGtS.png)](https://imgchr.com/i/pZuYGtS)
