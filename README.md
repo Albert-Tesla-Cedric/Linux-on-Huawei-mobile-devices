@@ -37,7 +37,6 @@
     * **图像/操作**：VNC (配合 AVNC 客户端)
     * **音频传输**：PulseAudio over TCP (配合 AAudio 驱动)
 
----
 
 ## 2. 核心配置流程总结
 
@@ -223,6 +222,7 @@ killall xdg-desktop-portal
 请参考github上的开源项目：[Yporaject](https://github.com/hazukieq/Yporaject)
 
 有能力支持的话还请前往[Typora官网](https://typora.io)或[Typora中文站](https://typoraio.cn)支持正版！
+
 
 ## 3. 问题解答 (Q&A) / Troubleshooting
 ### Q1: 刚开始有声音/画面，过一会儿就断连 (Connection refused)？
