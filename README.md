@@ -89,7 +89,7 @@
    adb shell device_config put activity_manager max_phantom_processes 65536
    
    # 3. (可选) 直接关闭进程监控功能，双重保险
-   adb shell settings put global settings_enable_monitor_phantom_procs false
+   adb shell "settings put global settings_enable_monitor_phantom_procs false"
    ```
 
 4. 验证是否生效：
