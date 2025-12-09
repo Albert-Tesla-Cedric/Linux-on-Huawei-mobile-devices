@@ -291,7 +291,7 @@ killall xdg-desktop-portal
 
 ## 📜 许可证 (License)
 
-本项目仅供学习与参考，欢迎查看与引用，但请标明出处，谢谢！
+本项目仅供学习与参考，欢迎分享与引用，但请标明出处，谢谢！
 
 Copyright (c) 2025 [Albert Tesla](https://github.com/albert-tesla-cedric)
 
