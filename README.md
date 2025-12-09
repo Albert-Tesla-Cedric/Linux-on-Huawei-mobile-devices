@@ -65,7 +65,15 @@
 
    - 这里如果发现在 USB 连接后，电脑中未显示手机或平板设备（没连上），很有可能是因为数据线的问题（建议尽量使用原装数据线）或电脑 USB 驱动的问题。
    - 如果是电脑 USB 驱动的问题，对于华为设备，可以在电脑上安装 [华为手机助手](https://consumer.huawei.com/cn/support/hisuite/) ，打开后点击右上角三条横线那个图标 "$\equiv$"，进入设置，点击“尝试其他方式”，然后再点击“重新安装USB驱动”即可。
-   - 如果电脑是windows设备(windows 10+)，且在执行上述步骤安装 USB 驱动时，出现了安装报错，可能是因为内核隔离功能阻止了驱动加载。对应的，这时我们就需要"打开windows设置"$\to$"进入【更新和安全】"$\to$"选择【windows 安全中心】"$\to$"点击【设备安全性】"$\to$"在【内核隔离】下，关闭 ”内存完整性选项“ "。这里建议在按这样设置并安装了驱动之后，将对应选项恢复为原来的设置。
+     [![pZuYtpQ.png](https://s41.ax1x.com/2025/12/09/pZuYtpQ.png)](https://imgchr.com/i/pZuYtpQ)
+
+     [![pZuYGtS.png](https://s41.ax1x.com/2025/12/09/pZuYGtS.png)](https://imgchr.com/i/pZuYGtS)
+
+     [![pZuYNlj.png](https://s41.ax1x.com/2025/12/09/pZuYNlj.png)](https://imgchr.com/i/pZuYNlj)
+
+     [![pZuYJfg.png](https://s41.ax1x.com/2025/12/09/pZuYJfg.png)](https://imgchr.com/i/pZuYJfg)
+
+   - 如果电脑是windows设备(windows 10+)，且在执行上述步骤安装 USB 驱动时，出现了安装报错，可能是因为内核隔离功能阻止了驱动加载。对应的，这时我们就需要"打开windows设置"—>"进入【更新和安全】"—>"选择【windows 安全中心】"—>"点击【设备安全性】"—>"在【内核隔离】下，关闭 ”内存完整性选项“ "。这里建议在按这样设置并安装了驱动之后，将对应选项恢复为原来的设置。
 
 2. 命令行输入 `adb devices`，平板端点击确认授权，确保命令行返回设备序列号。
 
@@ -248,7 +256,7 @@ killall xdg-desktop-portal
  * 原因：这是 Android 10+ 的安全策略限制。Google 禁止了普通应用（包括 Termux）读取 /proc/net 网络状态信息，导致 netstat 无法获取网络状态。但这并不代表 TCP 协议不可用。
  * 解决：使用 nc (netcat) 工具代替 netstat 进行端口连通性测试。命令：`nc -zv 127.0.0.1 4713`。
 ### Q5: 连接成功且波形图跳动，但没声音，日志报错 .so 库丢失？
- * **现象**：nc 测试通畅，pavucontrol 音量条在动，但听不到声音。Termux 日志报错：dlopen failed: library "android.hardware.input.common@1.0.so" not found。
+ * **现象**：nc 测试通畅，pavucontrol 音量条在动，但听不到声音。Termux 日志报错：`dlopen failed: library "android.hardware.input.common@1.0.so" not found`。
  * **原因**：这是华为 HarmonyOS (及部分高版本 Android) 的特有兼容性问题。Termux 默认调用的 OpenSL ES (sles) 驱动依赖于旧版 Android 系统库，而当前系统已移除或更改了该库。
  * **解决**：放弃 `module-sles-sink`，改用更新的、兼容性更好的 AAudio 驱动。在 Termux 的 default.pa 中配置 `load-module module-aaudio-sink`。
 ### Q6: 播放视频时终端报错 Sandbox: Couldn't list /dev 或显卡报错？
