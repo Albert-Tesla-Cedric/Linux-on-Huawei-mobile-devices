@@ -42,9 +42,10 @@
 
 ### 2.1 前置配置：使用 tmoe 工具在 Termux 上部署 Linux 环境和 VNC 服务
 
-确保已经跟随以下B站视频完成了相关配置：
+- 确保已经跟随以下B站视频完成了相关配置：
+  - UP主: *@在下莫老师* [【坏了，这回手机真变电脑了！给手机安装Linux系统，变身生产力神器】(bilibili)](https://www.bilibili.com/video/BV16u4y1M7yG/?vd_source=b912de0616e0c712bbc0840f6d000e8b)
 
-- UP主: *@在下莫老师* [【坏了，这回手机真变电脑了！给手机安装Linux系统，变身生产力神器】(bilibili)](https://www.bilibili.com/video/BV16u4y1M7yG/?vd_source=b912de0616e0c712bbc0840f6d000e8b)
+- 另外，为了方便后续的操作，请自行使用 **tmoe** 工具安装合适的输入法与浏览器。
 
 ### 2.2 系统底层优化：解除鸿蒙后台进程限制 (Phantom Process Killer)
 
@@ -64,8 +65,9 @@
 1. 通过 USB 数据线将平板连接至电脑，在电脑端打开 CMD 或终端，定位到 ADB 目录。
 
    - 这里如果发现在 USB 连接后，电脑中未显示手机或平板设备（没连上），很有可能是因为数据线的问题（建议尽量使用原装数据线）或电脑 USB 驱动的问题。
-   - 如果是电脑 USB 驱动的问题，对于华为设备，可以在电脑上安装 [华为手机助手](https://consumer.huawei.com/cn/support/hisuite/) ，打开后点击右上角三条横线那个图标，进入设置，点击“尝试其他方式”，然后再点击“重新安装USB驱动”即可。
-     
+
+   - 如果是电脑 USB 驱动的问题，对于华为设备，可以在电脑上安装 [华为手机助手](https://consumer.huawei.com/cn/support/hisuite/) ，打开后点击右上角三条横线那个图标 ，进入设置，点击“尝试其他方式”，然后再点击“重新安装USB驱动”即可。
+
      [![pZuYtpQ.png](https://s41.ax1x.com/2025/12/09/pZuYtpQ.png)](https://imgchr.com/i/pZuYtpQ)
 
      [![pZuYGtS.png](https://s41.ax1x.com/2025/12/09/pZuYGtS.png)](https://imgchr.com/i/pZuYGtS)
@@ -105,6 +107,7 @@
 [![pZuYrkT.jpg](https://s41.ax1x.com/2025/12/09/pZuYrkT.jpg)](https://imgchr.com/i/pZuYrkT)
 
 ### 2.3 图形化界面与外设输入的适配
+
 * **痛点**：使用 RealVNC Viewer 时，蓝牙鼠标滚轮无法翻页（表现为光标移动），Caps Lock 键失效。
 * **解决方案**：更换客户端并开启底层捕获。
 
@@ -204,10 +207,13 @@ apt install netcat-openbsd
  * 验证方法：
    * 启动 VNC 进入桌面。
    
-   * 运行终端命令 pavucontrol。
+   * 运行终端命令 `pavucontrol` (或直接启动远程桌面应用"PulseAudio 音量控制")。
    
-   * 查看 "Output Devices" 选项卡，确认设备名称显示为 AAudio 即为成功。
+   * 查看 "Output Devices" 选项卡，确认设备名称显示为 AAudio 即为成功，效果如下图所示：
    
+     [![pZuamUP.jpg](https://s41.ax1x.com/2025/12/09/pZuamUP.jpg)](https://imgchr.com/i/pZuamUP)
+   
+
 ### 2.6 生产力软件适配：Typora (Markdown 编辑器)
 
  * 痛点：Typora 1.9.x 在 Ubuntu 24.04 (Proot) 中文件界面无反馈。
@@ -294,8 +300,6 @@ killall xdg-desktop-portal
 本项目仅供学习与参考，欢迎分享与引用，但请标明出处，谢谢！
 
 Copyright (c) 2025 [Albert Tesla](https://github.com/albert-tesla-cedric)
-
-详见[LICENSE](./LICENSE)文件。
 
 ## ⚠️ 免责声明 (Disclaimer)
 
