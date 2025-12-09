@@ -44,7 +44,7 @@
 
 确保已经跟随以下B站视频完成了相关配置：
 
-- UP主: *@在下莫老师* [【坏了，这回手机真变电脑了！给手机安装Linux系统，变身生产力神器】(bilibili)](https://www.bilibili.com/video/BV16u4y1M7yG/?vd_source=b912de0616e0c712bbc0840f6d000e8b#reply279836061953)
+- UP主: *@在下莫老师* [【坏了，这回手机真变电脑了！给手机安装Linux系统，变身生产力神器】(bilibili)](https://www.bilibili.com/video/BV16u4y1M7yG/?vd_source=b912de0616e0c712bbc0840f6d000e8b)
 
 ### 2.2 系统底层优化：解除鸿蒙后台进程限制 (Phantom Process Killer)
 
