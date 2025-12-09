@@ -284,6 +284,8 @@ killall xdg-desktop-portal
 
 Copyright (c) 2025 [Albert Tesla](https://github.com/albert-tesla-cedric)
 
+详见[LICENSE](./LICENSE)文件。
+
 ## ⚠️ 免责声明 (Disclaimer)
 
 本指南提供的所有脚本和配置方法仅供学习和参考。
